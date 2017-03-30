@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Login</title>
+</head>
+<body>
+	<h1>Conencter vous</h1>
+	<form th:action="@{/session/login}" method="POST">
+	<table>
+		<tr>
+			<td>Email:</td>
+			<td><input type="text" placeholder="Email" name="username"/></td>
+		</tr>
+		<tr>
+			<td>Mot de passe:</td>
+			<td><input type="text" placeholder="Mot de passe.." name="password"/></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Connecter"/></td>
+			<td></td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>

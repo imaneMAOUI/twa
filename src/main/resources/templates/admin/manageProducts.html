@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Manage</title>
+</head>
+<body>
+	<h1>add new product</h1>
+	<form th:action="@{/admin/manageProducts/add}" method="post" th:object="${plat}">
+		<input type="text" name="description" placeholder="description" th:field="*{description}"/>
+		<input type="text" name="quantite" placeholder="quantite" th:field="*{quantite}"/>
+		<input type="text" name="prix" placeholder="prix" th:field="*{prix}"/>
+		<input type="submit" value="Ajouter"  />
+	</form>
+</body>
+</html>
